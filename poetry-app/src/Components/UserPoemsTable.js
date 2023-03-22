@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PoemTitleTD from './PoemTitleTD';
+import UserPoemsRows from './UserPoemsRows';
 
 class UserPoemsTable extends Component {
     constructor(props) {
@@ -8,18 +8,8 @@ class UserPoemsTable extends Component {
 
     // TODO: have redux set up this.props.poems
     render() {
-        return <UserlessPoemRows poems={this.props.poems} />
+        return <UserPoemsRows poems={this.props.poems} />
     }
 }
-
-const UserlessPoemRows = ({ poems }) => (
-    <div>
-        { poems.map(poem => 
-            <tr>
-                <PoemTitleTD poemtitle={poem.title} />
-            </tr>    
-        )}
-    </div>
-)
 
 export default UserPoemsTable;

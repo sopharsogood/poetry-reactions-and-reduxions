@@ -6,6 +6,8 @@ class UserPoemsTable extends Component {
         super(props);
     }
 
+    const 
+
     render() {
         
     }

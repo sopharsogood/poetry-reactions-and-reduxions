@@ -6,9 +6,7 @@ const PoemsRows = ({ poems }) => (
     <div>
         { poems.map(poem => 
             <tr>
-                <td>
-                    <UsernameLink username={poem.user.username} id={poem.user.id} />
-                </td>
+                <AuthorTD username={poem.user.username} userid={poem.user.id} />
                 <PoemTitleTD poemtitle={poem.title} />
             </tr>    
         )}

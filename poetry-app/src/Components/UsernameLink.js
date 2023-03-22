@@ -8,7 +8,7 @@ class UsernameLink extends Component {
 
     render {
         return(
-            
+            <NavLink to={"/user/" + this.props.userid}>{this.props.username}</Link>
         )
     }
 }

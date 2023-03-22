@@ -6,9 +6,11 @@ class UsernameLink extends Component {
         super(props);
     }
 
-    render {
+    render() {
         return(
-            <NavLink to={"/user/" + this.props.userid}>{this.props.username}</Link>
+            <NavLink to={"/user/" + this.props.userid}>
+                {this.props.username}
+            </NavLink>
         )
     }
 }

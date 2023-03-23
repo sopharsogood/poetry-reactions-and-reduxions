@@ -8,8 +8,8 @@ class UsernamePasswordFields extends Component {
     render() {
         return(
             <p>
-                Username: <input type="text" name="username" id="username" /> <br />
-                Password: <input type="password" name="password" id="password" />
+                Username: <input type="text" name="username" id="username" onChange={event => this.props.handleChange(event)} value={this.props.formData} /> <br />
+                Password: <input type="password" name="password" id="password" onChange={event => this.props.handleChange(event)} value={this.props.formData} />
             </p>
         )
     }

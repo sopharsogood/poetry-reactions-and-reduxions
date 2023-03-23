@@ -8,7 +8,19 @@ class PoemsTable extends Component {
 
     // TODO: have redux set up this.props.poems
     render() {
-        return <PoemsRows poems={this.props.poems} />
+        return(
+            <table>
+                <th>
+                    <td>
+                        Author
+                    </td>
+                    <td>
+                        Title
+                    </td>
+                </th>
+                <PoemsRows poems={this.props.poems} />
+            </table>
+        ) 
     }
 }
 

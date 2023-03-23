@@ -4,9 +4,6 @@ class UserSerializer
     end
 
     def to_serialized_json
-        @user.to_json(:include => {
-            :username,
-            :id,
-        }, :except => [:created_at, :updated_at, :password_digest])
+        @user.to_json(:except => [:created_at, :updated_at, :password_digest])
     end
 end 

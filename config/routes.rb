@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   scope '/api' do
     resources :poems do
       resources :comments
-      get '/comments/:id/new', to: 'comments#new', as: 'new_comment_reply'
-      post '/comments/:id/new', to: 'comments#create'
     end
-    resources :users
+    resources :users, only: [:create, :show, :index]
+    resources :sessions, only: [:create]
+    delete :logout, to: "sessions#logout"
   end
 end

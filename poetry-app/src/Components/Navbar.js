@@ -8,19 +8,19 @@ class Navbar extends Component {
 
     render() {
         let loginLogoutNav
-        if this.props.is_logged_in? {
+        if (this.props.is_logged_in) {
             loginLogoutNav = <div>
                     <UsernameLink username={props.user.username} userid={props.user.userid} /> | Log Out
                 </div>
         } else {
-            Log In | Register
+            "Login | Register"
         }
         return(
             <h5>
                 <NavLink to="/">
                     Home
                 </NavLink> | {loginLogoutNav}
-            </h5>>
+            </h5>
         )
     }
 }

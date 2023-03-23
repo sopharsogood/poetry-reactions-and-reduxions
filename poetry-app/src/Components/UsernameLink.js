@@ -8,8 +8,8 @@ class UsernameLink extends Component {
 
     render() {
         return(
-            <NavLink to={"/user/" + this.props.userid}>
-                {this.props.username}
+            <NavLink to={"/user/" + this.props.user.userid}>
+                {this.props.user.username}
             </NavLink>
         )
     }

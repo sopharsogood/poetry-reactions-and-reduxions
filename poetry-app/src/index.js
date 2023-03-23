@@ -8,9 +8,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const store = createStore(
-  shoppingListItemReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+   rootReducer,
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+ );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

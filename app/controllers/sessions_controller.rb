@@ -8,5 +8,9 @@ class Api::V1::SessionsController < ApplicationController
             render json: { status 401 }
         end
     end
-
+    
+    def logout
+        reset_session
+        render json: { status: 200, user: null }
+    end
 end

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     def index
         users = User.all
-        render json: users, except: [:password_digest, :created_at, :updated_at]
+        serialized_users = users.map{ |user| UserSerializer.new(user).to_serialized_json }
+        render json: serialized_users
     end
 end

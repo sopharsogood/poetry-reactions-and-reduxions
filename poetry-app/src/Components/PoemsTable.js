@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 import PoemsRows from './PoemsRows';
+import { fetch_poems } from '../Actions/poemActions';
 
 class PoemsTable extends Component {
     constructor(props) {
         super(props);
+        this.state.poems = []
     }
 
-    // TODO: have redux set up this.props.poems
+    componentDidMount() {
+        fetch_poems()
+            .then(data => {
+                this.setState({
+                  poems: data.poems
+                })
+            }
+        )
+    }
+    
     render() {
         return(
             <table>
@@ -18,7 +29,7 @@ class PoemsTable extends Component {
                         Title
                     </td>
                 </th>
-                <PoemsRows poems={this.props.poems} />
+                <PoemsRows poems={this.state.poems} />
             </table>
         ) 
     }

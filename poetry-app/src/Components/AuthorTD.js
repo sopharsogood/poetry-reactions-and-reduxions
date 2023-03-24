@@ -9,7 +9,7 @@ class AuthorTD extends Component {
     render() {
         return(
             <td>
-                <UsernameLink username={props.username} userid={props.userid} />
+                <UsernameLink username={this.props.username} userid={this.props.userid} />
             </td>
         )
     }

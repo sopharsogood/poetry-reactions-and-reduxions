@@ -1,6 +1,6 @@
 import React from 'react';
 import PoemTitleTD from './PoemTitleTD';
-import UsernameLink from './UsernameLink';
+import AuthorTD from './AuthorTD';
 
 const PoemsRows = ({ poems }) => (
     <div>

@@ -5,7 +5,7 @@ class PoemTitleTD extends Component {
         super(props);
     }
 
-    render {
+    render() {
         return(
             <td>
                 {this.props.poemtitle}

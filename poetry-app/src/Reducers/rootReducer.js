@@ -4,9 +4,7 @@ import poemsReducer from './poemsReducer'
 import commentsReducer from './commentsReducer'
 
 const rootReducer = combineReducers({
-    users: usersReducer,
-    poems: poemsReducer,
-    comments: commentsReducer
+    users: usersReducer
 });
 
 export default rootReducer;

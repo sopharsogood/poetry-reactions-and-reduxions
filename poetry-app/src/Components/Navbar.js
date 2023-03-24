@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
+import UsernameLink from './UsernameLink';
 
 class Navbar extends Component {
     constructor(props) {
@@ -10,10 +11,10 @@ class Navbar extends Component {
         let loginLogoutNav
         if (this.props.is_logged_in) {
             loginLogoutNav = <div>
-                    <UsernameLink username={props.user.username} userid={props.user.userid} /> | Log Out
+                    <UsernameLink username={this.props.user.username} userid={this.props.user.userid} /> | Log Out
                 </div>
         } else {
-            "Login | Register"
+            loginLogoutNav = "Login | Register"
         }
         return(
             <h5>

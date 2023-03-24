@@ -1,2 +1,2 @@
-export const ATTEMPT_LOGIN = "ATTEMPT_LOGIN"
-export const ATTEMPT_REGISTER = "ATTEMPT_REGISTER"
+export const LOGIN = "LOGIN"
+export const LOGOUT = "REGISTER"

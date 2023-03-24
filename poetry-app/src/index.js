@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './Reducers/rootReducer';
 import './index.css';
@@ -8,10 +8,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import thunk from 'redux-thunk';
 
+const composedEnhancer = compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
 const store = createStore(
    rootReducer,
-   applyMiddleware(thunk),
-   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+   composedEnhancer
  );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

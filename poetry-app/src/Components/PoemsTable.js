@@ -5,7 +5,7 @@ import { fetch_poems } from '../Actions/poemActions';
 class PoemsTable extends Component {
     constructor(props) {
         super(props);
-        this.state.poems = []
+        this.state = { poems: [] }
     }
 
     componentDidMount() {

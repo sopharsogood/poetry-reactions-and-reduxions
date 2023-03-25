@@ -3,14 +3,14 @@ import PoemTitleTD from './PoemTitleTD';
 import AuthorTD from './AuthorTD';
 
 const PoemsRows = ({ poems }) => (
-    <div>
+    <React.Fragment>
         { poems.map(poem => 
             <tr>
                 <AuthorTD username={poem.user.username} userid={poem.user.id} />
                 <PoemTitleTD poemtitle={poem.title} />
             </tr>    
         )}
-    </div>
+    </React.Fragment>
 )
 
 export default PoemsRows;

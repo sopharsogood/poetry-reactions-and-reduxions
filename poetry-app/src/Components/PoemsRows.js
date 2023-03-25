@@ -11,7 +11,7 @@ class PoemsRows extends Component {
         console.log(this.props.poems)
         return(<React.Fragment>
             { this.props.poems.map((poem) => 
-                <tr>
+                <tr key={poem.id}>
                     <AuthorTD username={poem.author.username} userid={poem.author.id} />
                     <PoemTitleTD poemtitle={poem.title} />
                 </tr>   

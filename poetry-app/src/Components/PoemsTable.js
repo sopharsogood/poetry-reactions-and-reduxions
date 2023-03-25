@@ -12,7 +12,7 @@ class PoemsTable extends Component {
         fetch_poems()
             .then(data => {
                 this.setState({
-                  poems: data.poems
+                  poems: data
                 })
             }
         )

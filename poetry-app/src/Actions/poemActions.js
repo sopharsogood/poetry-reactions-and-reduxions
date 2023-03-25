@@ -1,6 +1,8 @@
 export function fetch_poems() {
-    return fetch("/poems", {
+    const poemsdata = fetch("/poems", {
             method: "GET"
         })
             .then(resp => resp.json())
+    console.log(poemsdata)
+    return poemsdata
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
 
 class UsernameLink extends Component {
     constructor(props) {
@@ -8,9 +7,9 @@ class UsernameLink extends Component {
 
     render() {
         return(
-            <NavLink to={"/user/" + this.props.user.userid}>
-                {this.props.user.username}
-            </NavLink>
+            <div className="username-display" userid={this.props.userid}>
+                {this.props.username}
+            </div>
         )
     }
 }

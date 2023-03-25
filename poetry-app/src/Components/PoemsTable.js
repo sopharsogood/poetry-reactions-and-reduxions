@@ -21,14 +21,14 @@ class PoemsTable extends Component {
     render() {
         return(
             <table>
-                <th>
-                    <td>
+                <tr>
+                    <th>
                         Author
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Title
-                    </td>
-                </th>
+                    </th>
+                </tr>
                 <PoemsRows poems={this.state.poems} />
             </table>
         ) 

@@ -7,7 +7,6 @@ import Navbar from './Components/Navbar';
 import PoemsTable from './Components/PoemsTable';
 import LoginForm from './Components/LoginForm';
 import RegisterForm from './Components/RegisterForm';
-import HelloWorld from './Components/HelloWorld';
 
 function App() {
   return (

@@ -12,6 +12,9 @@ import thunk from 'redux-thunk';
 
 const store = createStore(
    rootReducer,
+   {
+    poems: []
+   },
    applyMiddleware(thunk)
  );
 

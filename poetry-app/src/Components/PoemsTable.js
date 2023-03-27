@@ -10,7 +10,7 @@ class PoemsTable extends Component {
 
     componentDidMount() {
         fetch_poems()
-            .then(poems => props.loadPoems(poems))
+            .then(poems => this.props.loadPoems(poems))
     }
     
     

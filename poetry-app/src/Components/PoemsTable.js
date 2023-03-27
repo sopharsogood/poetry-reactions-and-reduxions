@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PoemsRows from './PoemsRows';
 import { fetch_poems } from '../Actions/poemActions';
+import { connect } from 'react-redux';
 
 class PoemsTable extends Component {
     constructor(props) {
         super(props);
-        this.state = { poems: [] }
     }
 
     componentDidMount() {
@@ -29,10 +29,17 @@ class PoemsTable extends Component {
                         Title
                     </th>
                 </tr>
-                <PoemsRows poems={this.state.poems} />
+                <PoemsRows poems={this.props.poems} />
             </table>
         ) 
     }
 }
+const mapStateToProps = state => {
+    return {
+        poems: state.poems
+    };
+};
 
-export default PoemsTable;
+export default connect(
+  mapStateToProps
+)(PoemsTable); 

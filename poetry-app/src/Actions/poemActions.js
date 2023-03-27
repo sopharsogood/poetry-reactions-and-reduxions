@@ -1,3 +1,5 @@
+import { LOAD_POEMS } from "./actionTypes"
+
 export function fetch_poems() {
     const poemsdata = fetch("/poems", {
             method: "GET"
@@ -5,4 +7,8 @@ export function fetch_poems() {
             .then(resp => resp.json())
     console.log(poemsdata)
     return poemsdata
+}
+
+export function loadPoems(poems) {
+    return { type: LOAD_POEMS, poems: poems }
 }

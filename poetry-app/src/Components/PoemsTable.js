@@ -10,13 +10,10 @@ class PoemsTable extends Component {
 
     componentDidMount() {
         fetch_poems()
-            .then(data => this.props.loadPoems(data))
+            .then(poems => this.props.loadPoems(poems))
     }
     
-    
     render() {
-        console.log(this.props)
-        console.log(this.props.poems)
         return(
             <table>
                 <tr>

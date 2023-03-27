@@ -8,7 +8,6 @@ class PoemsRows extends Component {
     }
 
     render() {
-        console.log(this.props.poems)
         return(<React.Fragment>
             { this.props.poems.map((poem) => 
                 <tr key={poem.id}>

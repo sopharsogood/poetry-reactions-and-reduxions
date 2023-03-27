@@ -5,7 +5,6 @@ export function fetch_poems() {
             method: "GET"
         })
             .then(resp => resp.json())
-    console.log(poemsdata)
     return poemsdata
 }
 

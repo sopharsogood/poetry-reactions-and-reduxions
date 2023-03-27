@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PoemsRows from './PoemsRows';
-import { fetch_poems } from '../Actions/poemActions';
+import { fetch_poems, loadPoems } from '../Actions/poemActions';
 import { connect } from 'react-redux';
 
 class PoemsTable extends Component {
@@ -10,13 +10,9 @@ class PoemsTable extends Component {
 
     componentDidMount() {
         fetch_poems()
-            .then(data => {
-                this.setState({
-                  poems: data
-                })
-            }
-        )
+            .then(poems => props.loadPoems(poems))
     }
+    
     
     render() {
         return(
@@ -34,12 +30,20 @@ class PoemsTable extends Component {
         ) 
     }
 }
+
 const mapStateToProps = state => {
     return {
         poems: state.poems
     };
 };
 
+const mapDispatchToProps = dispatch => {
+    return {
+        loadPoems: (poems) => dispatch(loadPoems(poems))
+    };
+};
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(PoemsTable); 

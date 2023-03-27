@@ -1,6 +1,6 @@
 import { LOAD_POEMS } from "./actionTypes"
 
-export function fetch_poems() {
+export function fetchPoems() {
     const poemsdata = fetch("/poems", {
             method: "GET"
         })

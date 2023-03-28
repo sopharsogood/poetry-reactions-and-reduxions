@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PoemsRows from './PoemsRows';
-import { fetchPoems, loadPoems } from '../Actions/poemActions';
+import { fetchPoems, loadPoems } from '../Actions/poemsActions';
 import { connect } from 'react-redux';
 
 class PoemsTable extends Component {

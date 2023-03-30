@@ -7,11 +7,13 @@ import Navbar from './Components/Navbar';
 import PoemsTable from './Components/PoemsTable';
 import LoginForm from './Components/LoginForm';
 import RegisterForm from './Components/RegisterForm';
+import ShowPoemContainer from './Components/ShowPoemContainer';
 
 function App() {
   return (
     <div>
       <PoemsTable />
+      <ShowPoemContainer />
     </div>
   );
 }

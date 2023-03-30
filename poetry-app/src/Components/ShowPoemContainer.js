@@ -15,4 +15,12 @@ class ShowPoemContainer extends Component {
     }
 }
 
-export default ShowPoemContainer;
+const mapStateToProps = state => {
+    return {
+        poem: state.showpoem
+    };
+};
+
+export default connect(
+    mapStateToProps
+)(ShowPoemContainer);

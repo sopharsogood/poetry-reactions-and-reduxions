@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import DisplayPoem from './DisplayPoem'; 
+import CommentsTable from './CommentsTable';
+import { connect } from 'react-redux';
 
 class ShowPoemContainer extends Component {
     constructor(props) {

@@ -13,7 +13,13 @@ import thunk from 'redux-thunk';
 const store = createStore(
    rootReducer,
    {
-    poems: []
+    poems: [],
+    showpoem: {
+      id: 0,
+      title: "",
+      content: ""
+    },
+    comments: []
    },
    applyMiddleware(thunk)
  );

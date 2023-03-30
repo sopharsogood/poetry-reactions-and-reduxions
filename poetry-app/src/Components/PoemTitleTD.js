@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { fetchShowpoemAndComments } from '../Actions/showpoemActions';
 import { loadShowpoemAndComments } from '../Actions/showpoemActions';
+import { connect } from 'react-redux';
 
 class PoemTitleTD extends Component {
     constructor(props) {

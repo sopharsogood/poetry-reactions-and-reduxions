@@ -8,3 +8,7 @@ export function fetchShowpoemAndComments(showpoemId) {
             .then(resp => resp.json())
     return showpoemData
 }
+
+export function loadShowpoemAndComments(showpoem) {
+    return { type: LOAD_POEMS, poem: showpoem }
+}

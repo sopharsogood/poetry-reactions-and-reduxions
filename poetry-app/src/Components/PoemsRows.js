@@ -12,7 +12,7 @@ class PoemsRows extends Component {
             { this.props.poems.map((poem) => 
                 <tr key={poem.id}>
                     <AuthorTD username={poem.author.username} userid={poem.author.id} />
-                    <PoemTitleTD poemtitle={poem.title} />
+                    <PoemTitleTD poemtitle={poem.title} poemid={poem.id} />
                 </tr>   
             )}
         </React.Fragment>)

@@ -1,3 +1,4 @@
 export const LOGIN = "LOGIN"
 export const LOGOUT = "LOGOUT"
 export const LOAD_POEMS = "LOAD POEMS"
+export const LOAD_SHOWPOEM_AND_COMMENTS = "LOAD SHOWPOEM AND COMMENTS"

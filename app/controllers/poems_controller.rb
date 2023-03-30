@@ -6,6 +6,6 @@ class PoemsController < ApplicationController
 
     def show
         poem = Poem.find(params[:id])
-        render json: PoemSerializer.new(poem).to_serialized_json
+        render json: PoemSerializer.new(poem).to_serialized_json_with_comments
     end
 end

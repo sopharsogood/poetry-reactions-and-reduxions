@@ -21,4 +21,19 @@ class PoemTitleTD extends Component {
     }
 }
 
-export default PoemTitleTD;
+const mapStateToProps = state => {
+    return {
+        showpoemId: state.showpoem.id
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        loadShowpoemAndComments: (showpoem) => dispatch(loadShowpoemAndComments(showpoem))
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(PoemTitleTD); 

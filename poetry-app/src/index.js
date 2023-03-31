@@ -17,7 +17,11 @@ const store = createStore(
     showpoem: {
       id: 0,
       title: "",
-      content: ""
+      content: "",
+      author: {
+        id: 0,
+        username: "NULL USER"
+      }
     },
     comments: []
    },

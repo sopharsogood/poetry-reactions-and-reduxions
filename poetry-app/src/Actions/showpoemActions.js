@@ -10,6 +10,5 @@ export function fetchShowpoemAndComments(showpoemId) {
 }
 
 export function loadShowpoemAndComments(showpoem) {
-    console.log(showpoem)
     return { type: LOAD_SHOWPOEM_AND_COMMENTS, showpoem: showpoem }
 }

@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import AuthorTD from './AuthorTD';
 
-const CommentsRows = ({ comments }) => (
-    <div>
-        { comments.map(comment => 
-            <tr>
-                <AuthorTD username={comment.author.username} userid={comment.author.id} />
-                <td>{comment.content}</td>
-            </tr>    
-        )}
-    </div>
-)
+class CommentsRows extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return(<React.Fragment>
+            { this.props.comments.map((comment) => 
+                <tr key={comment.id}>
+                    <AuthorTD username={comment.author.username} userid={comment.author.id} />
+                    <td>{comment.content}</td>
+                </tr>    
+            )}
+        </React.Fragment>)
+    }
+}
 
 export default CommentsRows;

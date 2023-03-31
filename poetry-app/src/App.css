@@ -46,3 +46,7 @@ table {
   width: 80%;
   border-collapse: collapse;
 }
+
+p {
+  white-space: pre-line;
+}

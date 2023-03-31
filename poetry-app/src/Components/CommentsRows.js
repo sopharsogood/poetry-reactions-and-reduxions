@@ -5,8 +5,8 @@ const CommentsRows = ({ comments }) => (
     <div>
         { comments.map(comment => 
             <tr>
-                <AuthorTD username={comment.user.username} userid={comment.user.id} />
-                <td>{comment.contents}</td>
+                <AuthorTD username={comment.author.username} userid={comment.author.id} />
+                <td>{comment.content}</td>
             </tr>    
         )}
     </div>

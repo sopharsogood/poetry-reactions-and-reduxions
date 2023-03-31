@@ -7,6 +7,7 @@ class CommentsTable extends Component {
     }
 
     render() {
+        console.log(this.props.comments)
         return(
             <table>
                 <th>

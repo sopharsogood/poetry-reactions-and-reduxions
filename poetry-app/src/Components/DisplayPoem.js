@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UsernameLink from './UsernameLink';
 
 class DisplayPoem extends Component {
     constructor(props) {

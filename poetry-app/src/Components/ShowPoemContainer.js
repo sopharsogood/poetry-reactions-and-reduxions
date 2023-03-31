@@ -12,7 +12,7 @@ class ShowPoemContainer extends Component {
         return(
             <div>
                 <DisplayPoem poem={this.props.poem} />
-                <CommentsTable comments={this.props.poem.comments} />
+                <CommentsTable comments={this.props.comments} />
             </div>
         )
     }
@@ -20,7 +20,8 @@ class ShowPoemContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-        poem: state.showpoem
+        poem: state.showpoem,
+        comments: state.comments
     };
 };
 

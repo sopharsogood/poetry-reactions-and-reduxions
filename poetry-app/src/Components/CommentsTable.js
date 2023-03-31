@@ -10,14 +10,14 @@ class CommentsTable extends Component {
         console.log(this.props.comments)
         return(
             <table>
-                <th>
-                    <td>
+                <tr>
+                    <th>
                         User
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Comment
-                    </td>
-                </th>
+                    </th>
+                </tr>
                 <CommentsRows comments={this.props.comments} />
             </table>
         ) 

@@ -1,14 +1,17 @@
 import { LOGIN, LOGOUT } from "../Actions/actionTypes";
 
-function usersReducer(state = {}, action) {
+function sessionReducer(state = {}, action) {
     switch (action.type) {
         case LOGIN:
             return action.user
         case LOGOUT:
-            return {}
+            return {
+                userid: 0,
+                username: ""
+            }
         default:
             return state
     }
 }
 
-export default usersReducer;
+export default sessionReducer;

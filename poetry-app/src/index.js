@@ -23,7 +23,11 @@ const store = createStore(
         username: "NULL USER"
       }
     },
-    comments: []
+    comments: [],
+    session: {
+      userid: 0,
+      username: ""
+    }
    },
    applyMiddleware(thunk)
  );

@@ -20,7 +20,7 @@ const store = createStore(
       content: "",
       author: {
         id: 0,
-        username: "NULL USER"
+        username: ""
       }
     },
     comments: [],

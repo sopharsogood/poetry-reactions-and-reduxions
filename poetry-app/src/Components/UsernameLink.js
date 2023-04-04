@@ -6,8 +6,14 @@ class UsernameLink extends Component {
     }
 
     render() {
+        let usernameLinkClass
+        if (this.props.session.userid == this.props.userid) {
+            usernameLinkClass = "username-display-self"
+        } else {
+            usernameLinkClass = "username-display-other"
+        }
         return(
-            <div className="username-display" userid={this.props.userid}>
+            <div className={usernameLinkClass}>
                 {this.props.username}
             </div>
         )

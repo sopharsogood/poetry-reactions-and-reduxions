@@ -50,3 +50,11 @@ table {
 p {
   white-space: pre-line;
 }
+
+div .username-display-other {
+  color: #2a363b
+}
+
+div .username-display-self {
+  color: #193050
+}

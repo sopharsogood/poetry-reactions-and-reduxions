@@ -20,4 +20,12 @@ class UsernameLink extends Component {
     }
 }
 
-export default UsernameLink;
+const mapStateToProps = state => {
+    return {
+        session: state.session
+    };
+};
+
+export default connect(
+    mapStateToProps
+)(UsernameLink);

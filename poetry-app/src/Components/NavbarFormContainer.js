@@ -13,14 +13,16 @@ class NavbarFormContainer extends Component {
         let formToShow
         if (this.props.session.userid > 0 && this.props.showingForm == "NewPoem") {
             formToShow = <NewPoemForm />
-        } else if (this.props.session.userid = 0 && this.props.showingform == "Login") {
+        } else if (this.props.session.userid == 0 && this.props.showingForm == "Login") {
             formToShow = <LoginForm />
-        } else if (this.props.session.userid = 0 && this.props.showingform == "Register") {
+        } else if (this.props.session.userid == 0 && this.props.showingForm == "Register") {
             formToShow = <RegisterForm />
         }
 
         return(
-            {formToShow}
+            <div>
+                {formToShow}
+            </div>
         )
     }
 }

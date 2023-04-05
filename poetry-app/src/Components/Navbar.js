@@ -6,7 +6,9 @@ import { connect } from 'react-redux';
 class Navbar extends Component {
     constructor(props) {
         super(props);
-        this.state.showingForm = ""
+        this.state = {
+            showingForm: ""
+        }
     }
 
     handleOnClickLogin = () => {
@@ -37,11 +39,11 @@ class Navbar extends Component {
         let loginLogoutNav
         if (this.props.session.userid > 0) {
             loginLogoutNav = <span>
-                    <UsernameLink username={this.props.session.username} userid={this.props.session.userid} /> | <span onClick={handleOnClickNewPoem}>New Poem</span> | Log Out
+                    <UsernameLink username={this.props.session.username} userid={this.props.session.userid} /> | <span onClick={this.handleOnClickNewPoem}>New Poem</span> | Log Out
                 </span>
         } else {
             loginLogoutNav = <span>
-                <span onClick={handleOnClickLogin}>Login</span> | <span onClick={handleOnClickRegister}>Register</span>
+                <span onClick={this.handleOnClickLogin}>Login</span> | <span onClick={this.handleOnClickRegister}>Register</span>
             </span>
         }
         return(

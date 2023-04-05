@@ -1,6 +1,6 @@
 import { LOGIN, LOGOUT } from "./actionTypes";
 
-export function attempt_login(user) {
+export function attemptLogin(user) {
     return dispatch => {
         fetch("/login", {
             method: "POST",
@@ -21,7 +21,7 @@ export function attempt_login(user) {
     }
 }
 
-export function attempt_register(user) {
+export function attemptRegister(user) {
     return dispatch => {
         fetch("/users/new", {
             method: "POST",
@@ -42,7 +42,7 @@ export function attempt_register(user) {
     }
 }
 
-export function attempt_logout() {
+export function attemptLogout() {
     return dispatch => {
         fetch("/logout", {
             method: "DELETE",

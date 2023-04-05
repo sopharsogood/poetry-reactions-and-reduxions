@@ -9,7 +9,29 @@ class Navbar extends Component {
         this.state.showingForm = ""
     }
 
+    handleOnClickLogin = () => {
+        if (this.state.showingForm == "Login") {
+            this.state.showingForm = ""
+        } else {
+            this.state.showingForm = "Login"
+        }
+    }
 
+    handleOnClickNewPoem = () => {
+        if (this.state.showingForm == "NewPoem") {
+            this.state.showingForm = ""
+        } else {
+            this.state.showingForm = "NewPoem"
+        }
+    }
+
+    handleOnClickRegister = () => {
+        if (this.state.showingForm == "Register") {
+            this.state.showingForm = ""
+        } else {
+            this.state.showingForm = "Register"
+        }
+    }
 
     render() {
         let loginLogoutNav

@@ -51,7 +51,6 @@ class Navbar extends Component {
                 <h5>
                     {loginLogoutNav}
                 </h5>
-                {this.state.showingForm}
                 <NavbarFormContainer showingForm={this.state.showingForm} />
             </div>
         )

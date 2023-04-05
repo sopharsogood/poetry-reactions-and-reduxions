@@ -13,25 +13,25 @@ class Navbar extends Component {
 
     handleOnClickLogin = () => {
         if (this.state.showingForm == "Login") {
-            this.state.showingForm = ""
+            this.setState({showingForm: ""})
         } else {
-            this.state.showingForm = "Login"
+            this.setState({showingForm: "Login"})
         }
     }
 
     handleOnClickNewPoem = () => {
         if (this.state.showingForm == "NewPoem") {
-            this.state.showingForm = ""
+            this.setState({showingForm: ""})
         } else {
-            this.state.showingForm = "NewPoem"
+            this.setState({showingForm: "NewPoem"})
         }
     }
 
     handleOnClickRegister = () => {
         if (this.state.showingForm == "Register") {
-            this.state.showingForm = ""
+            this.setState({showingForm: ""})
         } else {
-            this.state.showingForm = "Register"
+            this.setState({showingForm: "Register"})
         }
     }
 
@@ -51,6 +51,7 @@ class Navbar extends Component {
                 <h5>
                     {loginLogoutNav}
                 </h5>
+                {this.state.showingForm}
                 <NavbarFormContainer showingForm={this.state.showingForm} />
             </div>
         )

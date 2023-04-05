@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
 import UsernameLink from './UsernameLink';
 import { connect } from 'react-redux';
+import NavbarFormContainer from './NavbarFormContainer';
 
 class Navbar extends Component {
     constructor(props) {
@@ -47,9 +47,12 @@ class Navbar extends Component {
             </span>
         }
         return(
-            <h5>
-                {loginLogoutNav}
-            </h5>
+            <div>
+                <h5>
+                    {loginLogoutNav}
+                </h5>
+                <NavbarFormContainer showingForm={this.state.showingForm} />
+            </div>
         )
     }
 }

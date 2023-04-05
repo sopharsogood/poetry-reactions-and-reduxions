@@ -60,6 +60,7 @@ div .username-display-self {
 }
 
 div .major-column {
-  vertical-align: middle;
-  width: 49%;
+  vertical-align: top;
+  width: 49.9%;
+  display: inline-block;
 }

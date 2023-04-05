@@ -58,3 +58,8 @@ div .username-display-other {
 div .username-display-self {
   color: #193050
 }
+
+div .major-column {
+  vertical-align: middle;
+  width: 49%;
+}

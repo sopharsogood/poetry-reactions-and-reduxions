@@ -12,8 +12,13 @@ import ShowPoemContainer from './Components/ShowPoemContainer';
 function App() {
   return (
     <div>
-      <PoemsTable />
-      <ShowPoemContainer />
+      <div className="major-column">
+        <Navbar />
+        <PoemsTable />
+      </div>
+      <div className="major-column">
+        <ShowPoemContainer />
+      </div>
     </div>
   );
 }

@@ -20,7 +20,7 @@ class RegisterForm extends Component {
         return(
             <div>
                 <h2>
-                    Log In:
+                    Register:
                 </h2>
                 <form>
                     <UsernamePasswordFields formData={this.state} handleChange={this.handleChange} />

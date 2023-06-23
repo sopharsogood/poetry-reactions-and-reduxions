@@ -23,7 +23,7 @@ export function attemptLogin(user) {
 
 export function attemptRegister(user) {
     return dispatch => {
-        fetch("/users/new", {
+        fetch("/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

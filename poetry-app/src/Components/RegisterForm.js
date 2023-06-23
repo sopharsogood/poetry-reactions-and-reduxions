@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UsernamePasswordFields from './UsernamePasswordFields';
 import { attemptRegister } from '../Actions/sessionActions';
+import { connect } from 'react-redux';
 
 class RegisterForm extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class RegisterForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        attemptRegister(this.state);
+        this.props.attemptRegister(this.state);
       };
 
     render() {
@@ -39,7 +40,7 @@ class RegisterForm extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        attemptRegister: () => dispatch(handleSubmit())
+        attemptRegister: () => dispatch(attemptRegister())
     };
 };
 

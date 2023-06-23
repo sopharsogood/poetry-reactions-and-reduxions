@@ -40,7 +40,7 @@ class RegisterForm extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        attemptRegister: () => dispatch(attemptRegister())
+        attemptRegister: (credentials) => dispatch(attemptRegister(credentials))
     };
 };
 

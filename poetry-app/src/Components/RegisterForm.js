@@ -36,4 +36,13 @@ class RegisterForm extends Component {
     }
 }
 
-export default RegisterForm;
+const mapDispatchToProps = dispatch => {
+    return {
+        handleSubmit: () => dispatch(handleSubmit())
+    };
+};
+
+export default connect(
+    null,
+    mapDispatchToProps    
+)(RegisterForm);

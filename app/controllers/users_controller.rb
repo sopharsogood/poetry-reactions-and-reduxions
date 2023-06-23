@@ -13,7 +13,7 @@ class UsersController < ApplicationController
         user = User.create!(username: params[:username], password: params[:password])
         if user
             session[:user_id] = user.id
-            render json: {user: user}
+            render json: UserSerializer.new(user).to_serialized_json
         else 
             render json: { status: 500 }
         end

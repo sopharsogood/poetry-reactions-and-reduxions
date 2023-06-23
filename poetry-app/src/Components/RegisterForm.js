@@ -16,13 +16,18 @@ class RegisterForm extends Component {
         })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.props.loginUser(this.state);
+      };
+
     render() {
         return(
             <div>
                 <h2>
                     Register:
                 </h2>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <UsernamePasswordFields formData={this.state} handleChange={this.handleChange} />
                     <input type="submit" value="Register" />
                 </form>

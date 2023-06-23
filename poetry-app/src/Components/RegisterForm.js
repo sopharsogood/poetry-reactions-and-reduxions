@@ -18,7 +18,7 @@ class RegisterForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.loginUser(this.state);
+        this.props.attemptRegister(this.state);
       };
 
     render() {
@@ -38,7 +38,7 @@ class RegisterForm extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleSubmit: () => dispatch(handleSubmit())
+        attemptRegister: () => dispatch(handleSubmit())
     };
 };
 

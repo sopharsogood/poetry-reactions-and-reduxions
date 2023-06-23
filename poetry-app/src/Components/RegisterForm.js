@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UsernamePasswordFields from './UsernamePasswordFields';
+import { attemptRegister } from '../Actions/sessionActions';
 
 class RegisterForm extends Component {
     constructor(props) {
@@ -16,9 +17,9 @@ class RegisterForm extends Component {
         })
     }
 
-    handleSubmit = (event) => {
+    handleSubmit = event => {
         event.preventDefault();
-        this.props.attemptRegister(this.state);
+        attemptRegister(this.state);
       };
 
     render() {

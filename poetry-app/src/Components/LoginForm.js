@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import UsernamePasswordFields from './UsernamePasswordFields';
+import { attemptLogin } from '../Actions/sessionActions';
+import { connect } from 'react-redux';
 
 class LoginForm extends Component {
     constructor(props) {
@@ -31,4 +33,13 @@ class LoginForm extends Component {
     }
 }
 
-export default LoginForm;
+const mapDispatchToProps = dispatch => {
+    return {
+        attemptLogin: (credentials) => dispatch(attemptLogin(credentials))
+    };
+};
+
+export default connect(
+    null,
+    mapDispatchToProps    
+)(LoginForm);

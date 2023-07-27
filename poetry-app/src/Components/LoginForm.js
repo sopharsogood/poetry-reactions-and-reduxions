@@ -18,13 +18,18 @@ class LoginForm extends Component {
         })
     }
 
+    handleSubmit = event => {
+        event.preventDefault();
+        this.props.attemptRegister(this.state);
+    };
+
     render() {
         return(
             <div>
                 <h2>
                     Log In:
                 </h2>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <UsernamePasswordFields formData={this.state} handleChange={this.handleChange} />
                     <input type="submit" value="Log In" />
                 </form>
